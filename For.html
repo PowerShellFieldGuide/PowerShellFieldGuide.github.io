@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <title>SitStayCreate -  For </title>
+      <!-- load style sheets -->
+      <link rel="stylesheet" href="SitStayCreate%20-%20For_files/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" href="SitStayCreate%20-%20For_files/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <link rel="stylesheet" href="SitStayCreate%20-%20For_files/style.css">
+      <!-- Load scripts -->
+      <script src="SitStayCreate%20-%20For_files/jquery.min.js"></script>
+      <script src="SitStayCreate%20-%20For_files/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="SitStayCreate%20-%20For_files/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="SitStayCreate%20-%20For_files/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      
+      
+    </head>
+    <body id="top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="http://127.0.0.1:5000/">PowerShell Field Guide</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item ">
+              <a class="nav-link" href="http://127.0.0.1:5000/about">About</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="http://127.0.0.1:5000/links">Links</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-white">
+            
+<li class="breadcrumb-item" aria-current="page"><a href="http://127.0.0.1:5000/">Home</a></li>
+<li class="breadcrumb-item active" aria-current="page"> For </li>
+
+        </ol>
+      </nav>
+
+    <div class="content-div">
+     
+<div class="content-card card mx-5 mb-5">
+    <div class="card-header text-center bg-dark text-light">
+        <h1 class="display-4">Control Flow</h1>
+    </div>
+    <div class="card-body justify-content-center">
+        <div>
+            <h1 class="text-center my-4">PowerShell For</h1>
+            <h2 class="text-center my-4">Before you begin: </h2>
+            <p>
+                In this lesson, we will be using PowerShell files you can find in the following github repo in a folder named 
+                PowerShell_Control_Flow:
+                <a href="https://github.com/ScottVaiskauckas/PowerShell">https://github.com/ScottVaiskauckas/PowerShell</a>.
+                If you have never used Github before, for full instructions on how to download this file, please see my page on 
+                <a href="http://127.0.0.1:5000/PowerShell/1">Getting Started</a>.
+            </p>
+            <h2 class="text-center my-4">For loops</h2>
+            <p>
+                For loops are similar to while loops. They have a test 
+condition and loop over a code block as long as that condition 
+                is true. However, they differ in that they are designed 
+for situations where a loop will run a set number of times.
+                The syntax for a for loop is demonstrated below. First 
+we have the for keyword, followed by three statements enclosed 
+                in parentheses. PowerShell calls these statements 
+"Placeholders" and terms the first placeholder the "init" placeholder,
+                the second placeholder the "condition" placeholder, and 
+the third statement the "repeat" placehold. After this, we have 
+                a statement list, which is the code to be executed when 
+the "condition" placeholder evaluates to true.
+            </p>
+            <div class="row justify-content-md-center">
+                <div class="col-4">
+                    <h5 class="text-center my-4">For Loop Syntax</h5>
+                        <img class="border img-fluid" src="SitStayCreate%20-%20For_files/For-Syntax.png"><br>
+                </div>
+                <div class="col-4">
+                    <h5 class="text-center my-4">While Loops revisited</h5>
+                        <img class="border img-fluid" src="SitStayCreate%20-%20For_files/For-While-Syntax.png"><br>
+                </div>
+            </div>
+
+            <p>
+                The "init" placeholder represents code that gets 
+executed before the loop begins. The most common thing to do here is 
+                to initialize a variable and assign it an integer value.
+            </p>
+            <p>
+                The "condition" placeholder works the same here as the 
+condition in while loops and if statements. This is the part of 
+                the code that is evaluated to determine whether or not 
+the loop will run. If it evaluates to $True, the code will run.
+            </p>
+            <p>
+                The "repeat" placeholder represents code that gets 
+executed when the loop repeats. The most common thing to do here is 
+                to increment our variable we initialized in the "init" 
+placeholder.
+            </p>
+
+            <p>
+                For loops are really just a shorthand for this specific 
+kind of While loop where we initialize a variable before the loop,
+                test that value against a condition, and increment the 
+value in our code block before looping over again.
+            </p>
+            <h5 class="text-center my-4">Example1</h5>
+            <div class="d-flex justify-content-center container-fluid my-3">
+                <img class="border img-fluid" src="SitStayCreate%20-%20For_files/For-Example1.png"><br>
+            </div>
+            <p>
+                Here we have a basic For loop. Compared to while loops, 
+there is a lot going on here on the very first line. First is 
+                the For statement, followed by a set of parentheses 
+enclosing our "init" placeholder, our "condition" placeholder, and 
+                our "repeat" placeholder. We initialize a variable $i 
+and assign it a value of 0 in our "init" placeholder. We then test 
+                this variable to see if it is greater than 3. It is not,
+ so this condition is true. Our statement in curly braces on lines 
+                2-4 executes and PowerShell writes "The value of $i is 
+0" to the shell console. PowerShell executes the code in our "repeat" 
+                placeholder and increments the value of $i to 1. 
+PowerShell once again enters the "condition" placeholder and evalues 
+whether 
+                $i is less than 3. It isn't, so the statement executes 
+once more writing "The value of $i is 1" to the console. PowerShell 
+                then enters the "repeat" placeholder again and 
+increments the variable to 2. PowerShell enters the "condition" 
+placeholder 
+                once again and evaluates whether or not $i is less than 
+3. It is, so PowerShell writes "The value of $i is 2" to the console.
+                PowerShell then increments the variable $i one more 
+time. This time, when PowerShell reaches the "condition" placeholder, 
+the 
+                condition evaluates to false. PowerShell exits the For 
+loop and exits the script.
+            </p>
+            <h5 class="text-center my-4">Output:</h5>
+            <div class="d-flex justify-content-center container-fluid my-3">
+                <img class="border img-fluid" src="SitStayCreate%20-%20For_files/For-Example1-Result.png"><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+<div class="text-center">
+     <a href="http://127.0.0.1:5000/PowerShell/15">Previous</a> 
+    <a href="http://127.0.0.1:5000/PowerShell/17">Next</a>
+</div>
+
+    </div>
+    
+</body></html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <title>SitStayCreate -  Lists </title>
+      <!-- load style sheets -->
+      <link rel="stylesheet" href="SitStayCreate%20-%20Lists_files/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" href="SitStayCreate%20-%20Lists_files/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <link rel="stylesheet" href="SitStayCreate%20-%20Lists_files/style.css">
+      <!-- Load scripts -->
+      <script src="SitStayCreate%20-%20Lists_files/jquery.min.js"></script>
+      <script src="SitStayCreate%20-%20Lists_files/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="SitStayCreate%20-%20Lists_files/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="SitStayCreate%20-%20Lists_files/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      
+      
+    </head>
+    <body id="top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="http://127.0.0.1:5000/">PowerShell Field Guide</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item ">
+              <a class="nav-link" href="http://127.0.0.1:5000/about">About</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="http://127.0.0.1:5000/links">Links</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-white">
+            
+<li class="breadcrumb-item" aria-current="page"><a href="http://127.0.0.1:5000/">Home</a></li>
+<li class="breadcrumb-item active" aria-current="page"> Lists </li>
+
+        </ol>
+      </nav>
+
+    <div class="content-div">
+     
+<div class="content-card card mx-5 mb-5">
+    <div class="card-header text-center bg-dark text-light">
+        <h1 class="display-4">Collections</h1>
+    </div>
+    <div class="card-body justify-content-center">
+        <div>
+            <h1 class="text-center my-4">Lists</h1>
+            <p>
+                In this lesson, we are going to cover PowerShell Lists.
+            </p>
+            <h2 class="text-center my-4">Before you begin: </h2>
+            <p>
+                In this lesson, we will be using PowerShell files you can find in the following github repo in a folder named 
+                PowerShell_Collections:
+                <a href="https://github.com/ScottVaiskauckas/PowerShell">https://github.com/ScottVaiskauckas/PowerShell</a>.
+                If you have never used Github before, for full instructions on how to download this file, please see my page on 
+                <a href="http://127.0.0.1:5000/PowerShell/1">Getting Started</a>.
+            </p>
+            <h2 class="text-center my-4">What is a list?</h2>
+            <p>
+                What is a list? A list is similar to an array in that it
+ is a collection of items. The syntax for accessing list elements is 
+even 
+                the same as the syntax for accessing array elements. 
+There are some very important differences between arrays and lists.
+            </p>
+            <p> 
+                In the lesson on arrays, I told you that arrays are 
+quick to access elements, but slow to add new elements or remove 
+elements. 
+                I said that this was because arrays are immutable. I 
+want to explore that idea a little bit further before I explain how 
+lists 
+                are different. When we create an array in PowerShell, 
+PowerShell reserves some memory addresses for the array. These memory 
+                addresses have to be adjacent for this data structure. 
+In order to increase the size of the array, our computer has to find 
+more 
+                adjacent memory addresses that can accomodate the larger
+ array size. The computer then copies the values from the old array to 
+the 
+                new array and assigns the new value to the new element.
+            </p>
+            <p>
+                This is why arrays are not a very good data structure to
+ use if you need to insert new elements, add new elements, or remove 
+elements.
+                You can reserve extra memory for an array as a work 
+around, but then you're just reserving that memory and you may not even 
+need it.
+            </p>
+            <p>
+                Now that you know what's really going on when you create
+ an array, I think it will be easy to understand the list data 
+structure. The 
+                list data structure is not of a fixed sized, i.e. is 
+mutable. The way this works is that the list does not require adjacent 
+memory 
+                addresses; each list element stores a reference to the 
+preceding element in the set and a reference to the following element in
+ the set.
+                This means that inserting elements into a list, adding 
+elements into a list, and removing elements from a list requires fewer 
+resources 
+                than the same changes do with arrays. Here all that has 
+to happen is to create a new space somewhere in memory for the new item 
+and to 
+                update the references to reflect the changes.
+            </p>
+            <p>
+                The trade-off we have with lists is that we lose the 
+ability to access any element in the collection immediately. In order to
+ find a 
+                specific element, we have to go sequentially in order 
+checking the references until we find our element. Because of this, 
+lists have 
+                worse performance than arrays when looking up an 
+element's value. In computer science, this property of arrays is called 
+"random access."
+            </p>
+            <h5 class="text-center my-4">Example 1</h5>
+            <div class="d-flex justify-content-center container-fluid my-3">
+                <img class="border img-fluid" src="SitStayCreate%20-%20Lists_files/Lists-Example1.png"><br>
+            </div>
+            <p>
+                On line 1, we create an instance of a list and assign it
+ to $ObjectList. The syntax here might look a bit thorny, but really 
+we're just 
+                telling what part of the .Net framework to look in with 
+the first part (System.Collections.Generic namespace). If you ignore 
+this part,
+                it might look a bit less intimidating. We simply have 
+the datatype List[object] in the type accelerator and we are creating a 
+new instance 
+                <!-- TODO: is this called the new operator? --> by calling the static new method on the class. Also, please note that we do not specify 
+                how big it is when we create it.
+            </p>
+            <p>
+                Next we add elements to our list with the .add() method.
+ We create a List[object] which means that the list will accept any data
+ type 
+                that is a subclass of the object type. This allows us to
+ add different data types to our list. To illustrate this, we add a 
+string first,
+                then three int32s. Following this, we call .getType() on
+ the list and all of it's elements. Lastly, we return the $ObjectList 
+and display 
+                the values of the elements. See the output below, and 
+note that the first element is in fact a string while the rest are 
+int32s.
+            </p>
+            <h5 class="text-center my-4">Output:</h5>
+            <div class="d-flex justify-content-center container-fluid my-3">
+                <img class="border img-fluid" src="SitStayCreate%20-%20Lists_files/Lists-Example1-Result.png"><br>
+            </div>
+            <h5 class="text-center my-4">Example 2</h5>
+            <div class="d-flex justify-content-center container-fluid my-3">
+                <img class="border img-fluid" src="SitStayCreate%20-%20Lists_files/Lists-Example2.png"><br>
+            </div>
+            <p>
+                The next example is pretty much the same as the first, 
+but here we specify that the list can only store strings. Instead of 
+creating 
+                a List[object], we create a List[String]. This time, 
+when we add our int32s, they are converted to strings.
+            </p>
+            <h5 class="text-center my-4">Output:</h5>
+            <div class="d-flex justify-content-center container-fluid my-3">
+                <img class="border img-fluid" src="SitStayCreate%20-%20Lists_files/Lists-Example2-Result.png"><br>
+            </div>
+            <h5 class="text-center my-4">Example 3</h5>
+            <div class="d-flex justify-content-center container-fluid my-3">
+                <img class="border img-fluid" src="SitStayCreate%20-%20Lists_files/Lists-Example3.png"><br>
+            </div>
+            <p>
+                In example 3, we begin as we did in example 1 by 
+creating a List[object] object and adding four elements with the .add() 
+method.
+                However, in this example, we use the .remove() method to
+ remove elements from the list. The .remove() method will return true 
+                if the element was in the list and remove the element 
+from the list. It will return false if the element was not in the list.
+                First we remove the fourth element, since it has the 
+value 3, and return $true. Next we remove the third element since it has
+ 
+                the value 2, and return $true. We call the remove 
+.method() one more time and try to remove an element with the value 2. 
+Since 
+                the list no longer contains any elements with the value 
+two, the method returns false and no elements are removed. We then write
+ 
+                our list object to the console window.
+            </p>
+            <h5 class="text-center my-4">Output:</h5>
+            <div class="d-flex justify-content-center container-fluid my-3">
+                <img class="border img-fluid" src="SitStayCreate%20-%20Lists_files/Lists-Example3-Result.png"><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+<div class="text-center">
+     <a href="http://127.0.0.1:5000/PowerShell/18">Previous</a> 
+    <a href="http://127.0.0.1:5000/PowerShell/20">Next</a>
+</div>
+
+    </div>
+    
+</body></html>

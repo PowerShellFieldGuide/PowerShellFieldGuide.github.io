@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <title>SitStayCreate -  Named Parameters </title>
+      <!-- load style sheets -->
+      <link rel="stylesheet" href="SitStayCreate%20-%20Named%20Parameters_files/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" href="SitStayCreate%20-%20Named%20Parameters_files/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <link rel="stylesheet" href="SitStayCreate%20-%20Named%20Parameters_files/style.css">
+      <!-- Load scripts -->
+      <script src="SitStayCreate%20-%20Named%20Parameters_files/jquery.min.js"></script>
+      <script src="SitStayCreate%20-%20Named%20Parameters_files/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="SitStayCreate%20-%20Named%20Parameters_files/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="SitStayCreate%20-%20Named%20Parameters_files/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      
+      
+    </head>
+    <body id="top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="http://127.0.0.1:5000/">PowerShell Field Guide</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item ">
+              <a class="nav-link" href="http://127.0.0.1:5000/about">About</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="http://127.0.0.1:5000/links">Links</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-white">
+            
+<li class="breadcrumb-item" aria-current="page"><a href="http://127.0.0.1:5000/">Home</a></li>
+<li class="breadcrumb-item" aria-current="page"><a href="http://127.0.0.1:5000/learn">Learn</a></li>
+<li class="breadcrumb-item active" aria-current="page">PowerShell Named Parameters</li>
+
+        </ol>
+      </nav>
+
+    <div class="content-div">
+     
+<div class="content-card card mx-5 mb-5">
+    <div class="card-header text-center bg-dark text-light">
+        <h1 class="display-4">Making Reusable Code</h1>
+    </div>
+    <div class="card-body justify-content-center">
+        <div>
+            <h1 class="text-center my-4">Making your code reusable - Named Parameters</h1>
+            <p>
+                This is the third lesson in a series of lessons on making your code more reusable.
+            </p>
+            <h2 class="text-center my-4">Before you begin: </h2>
+            <p>
+                In this lesson, we will be using PowerShell files you can find in the following github repo in a folder named 
+                PowerShell_Functions:
+                <a href="https://github.com/ScottVaiskauckas/PowerShell">https://github.com/ScottVaiskauckas/PowerShell</a>.
+                If you have never used Github before, for full instructions on how to download this file, please see my page on 
+                <a href="http://127.0.0.1:5000/PowerShell/1">Getting Started</a>.
+            </p>
+            <h2 class="text-center my-4">Named Parameters</h2>
+
+            <div class="row justify-content-md-center">
+                <div class="col">
+                    <p>
+                        There is another kind of parameter in PowerShell
+ called a named parameter. Unlike positional parameters, named
+                        parameters use the name of an argument to 
+determine which parameter a programmer intended to use. Positional
+                        parameters save you a few lines of code, but at 
+the cost of clarity. I prefer named parameters most of the time in
+                        PowerShell, though that is not true with all 
+scripting languages.
+                    </p>
+                </div>
+                <div class="col">
+                    <img class="border img-fluid" src="SitStayCreate%20-%20Named%20Parameters_files/NamedParams-Syntax.png"><br>
+                </div>
+            </div>
+
+            <h5 class="text-center my-4">Example 1</h5>
+            <div class="d-flex justify-content-center container-fluid my-3">
+                <img class="border img-fluid" src="SitStayCreate%20-%20Named%20Parameters_files/NamedParams-Example1.png"><br>
+            </div>
+            <p>
+                In the first example, we have two parameters, one for 
+first name and one for last name. We run this code passing in the names
+                Scott and Vaiskauckas for the -Firstname and -LastName 
+arguments.
+            </p>
+            <h5 class="text-center my-4">Output:</h5>
+            <div class="d-flex justify-content-center container-fluid my-3">
+                <img class="border img-fluid" src="SitStayCreate%20-%20Named%20Parameters_files/NamedParams-Example1-Result1.png"><br>
+            </div>
+            <p>
+                We run the example again, this time passing in the 
+argument Tosin to the -FirstName parameter and Abasi to the -LastName 
+parameter.
+            </p>
+            <h5 class="text-center my-4">Output:</h5>
+            <div class="d-flex justify-content-center container-fluid my-3">
+                <img class="border img-fluid" src="SitStayCreate%20-%20Named%20Parameters_files/NamedParams-Example1-Result2.png"><br>
+            </div>
+            <p>
+                We run the script a third time, however, this time we do
+ not pass in any arguments. The script still runs fine, but the output
+                has spaces where the arguments for the -FirstName and 
+-LastName parameters should be.
+            </p>
+            <h5 class="text-center my-4">Output:</h5>
+            <div class="d-flex justify-content-center container-fluid my-3">
+                <img class="border img-fluid" src="SitStayCreate%20-%20Named%20Parameters_files/NamedParams-Example1-Result3.png"><br>
+            </div>
+            <h5 class="text-center my-4">Example 2</h5>
+            <div class="d-flex justify-content-center container-fluid my-3">
+                <img class="border img-fluid" src="SitStayCreate%20-%20Named%20Parameters_files/NamedParams-Example2.png"><br>
+            </div>
+            <p>
+                With example two, we can avoid this situation by 
+providing default values for the parameters. PowerShell will use these 
+values if
+                an argument is not passed to a parameter when the script
+ is run. First we run the script passing the arguments Scott and 
+Vaiskauckas again.
+            </p>
+            <h5 class="text-center my-4">Output:</h5>
+            <div class="d-flex justify-content-center container-fluid my-3">
+                <img class="border img-fluid" src="SitStayCreate%20-%20Named%20Parameters_files/NamedParams-Example2-Result1.png"><br>
+            </div>
+            <p>
+                Now we run the script with no arguments and see that it 
+uses the default values of Stephen for the -FirstName parameter and King
+ for the
+                -LastName parameter.
+            </p>
+            <h5 class="text-center my-4">Output:</h5>
+            <div class="d-flex justify-content-center container-fluid my-3">
+                <img class="border img-fluid" src="SitStayCreate%20-%20Named%20Parameters_files/NamedParams-Example2-Result2.png"><br>
+            </div>
+            <h5 class="text-center my-4">Example 3</h5>
+            <div class="d-flex justify-content-center container-fluid my-3">
+                <img class="border img-fluid" src="SitStayCreate%20-%20Named%20Parameters_files/NamedParams-Example3.png"><br>
+            </div>
+            <p>
+                PowerShell will allow you to use type accelerators to 
+specify the type of a parameter and make it strongly typed.
+            </p>
+            <h5 class="text-center my-4">Output:</h5>
+            <div class="d-flex justify-content-center container-fluid my-3">
+                <img class="border img-fluid" src="SitStayCreate%20-%20Named%20Parameters_files/NamedParams-Example3-Result1.png"><br>
+            </div>
+            <h5 class="text-center my-4">Example 4</h5>
+            <div class="d-flex justify-content-center container-fluid my-3">
+                <img class="border img-fluid" src="SitStayCreate%20-%20Named%20Parameters_files/NamedParams-Example4.png"><br>
+            </div>
+            <p>
+                PowerShell will also allow you to make parameters 
+mandatory. This is another approach to making sure users don't run 
+scripts without
+                providing values for arguments. This is very useful if 
+you cannot reasonable predict what a default value for an argument 
+should be.
+            </p>
+            <h5 class="text-center my-4">Output:</h5>
+            <div class="d-flex justify-content-center container-fluid my-3">
+                <img class="border img-fluid" src="SitStayCreate%20-%20Named%20Parameters_files/NamedParams-Example4-Result1.png"><br>
+            </div>
+            <h5 class="text-center my-4">Example 5</h5>
+            <div class="d-flex justify-content-center container-fluid my-3">
+                <img class="border img-fluid" src="SitStayCreate%20-%20Named%20Parameters_files/PositionalParams-Example2.png"><br>
+            </div>
+            <p>
+                In our last code example, I demonstrate using positional
+ parameters with named parameters. If you're coming from a Python 
+background,
+                things work a little bit differently here. With Python, 
+positional parameters must precede named parameters (they're called 
+positional 
+                arguments and keyword arguments in that language, but 
+same idea). PowerShell really doesn't care what order you supply them or
+ even if
+                you supply them at all unless told otherwise. See below:
+            </p>
+            <h5 class="text-center my-4">Output:</h5>
+            <div class="d-flex justify-content-center container-fluid my-3">
+                <img class="border img-fluid" src="SitStayCreate%20-%20Named%20Parameters_files/PositionalParams-Example2-Result1.png"><br>
+            </div>
+            <p>
+                First we call our script providing arguments in a more 
+pythonic way (positional parameters first, named parameters second). We 
+see Jack Black
+                and three of his roles display in the console.
+            </p>
+            <h5 class="text-center my-4">Output:</h5>
+            <div class="d-flex justify-content-center container-fluid my-3">
+                <img class="border img-fluid" src="SitStayCreate%20-%20Named%20Parameters_files/PositionalParams-Example2-Result2.png"><br>
+            </div>
+            <p>
+                We call our script again this time displaying another 
+Richard Linklater collaborator, Matthew McConaughey, and three of his 
+roles displayed
+                in the console. However, when we call it this time, we 
+take advantage of PowerShell's anything goes approach to parameters.
+            </p>
+    </div>
+</div>
+
+    
+<div class="text-center">
+     <a href="http://127.0.0.1:5000/PowerShell/25">Previous</a> 
+    <a href="http://127.0.0.1:5000/PowerShell/27">Next</a>
+</div>
+
+    </div>
+    
+</div></body></html>
