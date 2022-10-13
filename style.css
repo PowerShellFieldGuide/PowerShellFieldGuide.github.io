@@ -1,0 +1,38 @@
+/* base template */
+
+body
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.base-footer
+{
+    max-height: 75px;
+}
+
+/* tutorials */
+
+/* msiexec */
+
+.posh-variable
+{
+    color: rgb(219, 150, 0);
+    font-weight: bold;
+}
+
+.directory-tree
+{
+    font-weight: bold;
+    margin-left: 180px;
+}
+
+.topic-list
+{
+    font-weight: bold;
+}
+
+/* Operator Tables */
+.posh-op-table
+{
+    /* max-width: 1000px; */
+}
