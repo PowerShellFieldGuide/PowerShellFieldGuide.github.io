@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-      <title>PoshFG -  Foreach </title>
-      <!-- load style sheets -->
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>PoshFG -  Foreach </title>
+    <!-- load style sheets -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
@@ -11,10 +12,8 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-      
-      
-    </head>
-    <body id="top">
+</head>
+<body id="top">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="./index.html">PowerShell Field Guide</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,101 +34,81 @@
 
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-white">
-            
-<li class="breadcrumb-item" aria-current="page"><a href="./index.html">Home</a></li>
-<li class="breadcrumb-item active" aria-current="page"><a href="./Learn.html">Learn</a></li>
-<li class="breadcrumb-item active" aria-current="page"> Foreach </li>
-
+            <li class="breadcrumb-item" aria-current="page"><a href="./index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="./Learn.html">Learn</a></li>
+            <li class="breadcrumb-item active" aria-current="page"> Foreach </li>
         </ol>
       </nav>
 
     <div class="content-div">
      
-<div class="content-card card mx-5 mb-5">
-    <div class="card-header text-center bg-dark text-light">
-        <h1 class="display-4">Control Flow</h1>
-    </div>
-    <div class="card-body justify-content-center">
-        <div>
-            <h1 class="text-center my-4">PowerShell Foreach</h1>
-            <h2 class="text-center my-4">Before you begin: </h2>
-            <p>
-                In this lesson, we will be using PowerShell files you can find in the following github repo in a folder named 
-                PowerShell_Control_Flow:
-                <a href="https://github.com/PowerShellFieldGuide/Examples">https://github.com/PowerShellFieldGuide/Examples</a>.
-                If you have never used Github before, for full instructions on how to download this file, please see my page on 
-                <a href="./Getting_Started.html">Getting Started</a>.
-            </p>
-            <h2 class="text-center my-4">Foreach loops</h2>
-            <div class="row justify-content-md-center">
-                <div class="col-4">
-                    <p>
-                        In the last lesson, I ended with an example of 
-how to iterate through an array using a for loop and said that 
-PowerShell provides a
-                        special kind of loop called a Foreach loop for 
-just this purpose.
-                    </p>
+    <div class="content-card card mx-5 mb-5">
+        <div class="card-header text-center bg-dark text-light">
+            <h1 class="display-4">Control Flow</h1>
+        </div>
+        <div class="card-body justify-content-center">
+            <div>
+                <h1 class="text-center my-4">PowerShell Foreach</h1>
+                <h2 class="text-center my-4">Before you begin: </h2>
+                <p>
+                    In this lesson, we will be using PowerShell files you can find in the following github repo in a folder named
+                    PowerShell_Control_Flow:
+                    <a href="https://github.com/PowerShellFieldGuide/Examples">https://github.com/PowerShellFieldGuide/Examples</a>.
+                    If you have never used Github before, for full instructions on how to download this file, please see my page on
+                    <a href="./Getting_Started.html">Getting Started</a>.
+                </p>
+                <h2 class="text-center my-4">Foreach loops</h2>
+                <div class="row justify-content-md-center">
+                    <div class="col-4">
+                        <p>
+                            In the last lesson, I ended with an example of how to iterate through an array using a for loop
+                            and said that PowerShell provides a special kind of loop called a Foreach loop for just this
+                            purpose.
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <img class="border img-fluid" src="./images/PoshForeach/Foreach-Syntax.png"><br>
+                    </div>
                 </div>
-                <div class="col-4">
-                    <img class="border img-fluid" src="Foreach_files/Foreach-Syntax.png"><br>
-                </div>
-            </div>
 
-            <h5 class="text-center my-4">Example1</h5>
-            <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="Foreach_files/Foreach-Example1.png"><br>
+                <h5 class="text-center my-4">Example1</h5>
+                <div class="d-flex justify-content-center container-fluid my-3">
+                    <img class="border img-fluid" src="./images/PoshForeach/Foreach-Example1.png"><br>
+                </div>
+                <p>
+                    In our first example, we start by initializing an array with 4 elements named $ATXBirdArray and assign
+                    the strings "bluejays", "cardinals", "mocking birds", and "monk parakeets" on line 1. On line 3 we
+                    have our Foreach loop. We are going to iterate over the items in the $ATXBirdArray and use the $Bird
+                    variable as a reference to that item. PowerShell enters the loop and writes "You can find bluejays in
+                    Austin, Texas!" to the console. PowerShell reaches the end of the loop and moves on to the next item
+                    in the array. PowerShell writes "You can find cardinals in Austin, Texas!" to the console. PowerShell
+                    once again reaches the end of the loop and moves on to the next item in the array. PowerShell now writes
+                    "You can find mocking birds in Austin, Texas!" to the console. PowerShell reaches the end of the loop
+                    and moves on to the next item in the array. PowerShell writes "You can find monk parakeets in Austin,
+                    Texas!" and exits the loop.
+                </p>
+                <h5 class="text-center my-4">Output:</h5>
+                <div class="d-flex justify-content-center container-fluid my-3">
+                    <img class="border img-fluid" src="./images/PoshForeach/Foreach-Example1-Result.png"><br>
+                </div>
+                <h5 class="text-center my-4">Obligatory Foreach-Object alias Foreach warning</h5>
+                <p>
+                    Every course on PowerShell I have ever seen has a warning that Foreach-Object has an alias named
+                    Foreach. It's almost impossible to accidentally use one in place of the other in practice. I'm
+                    mentioning it here for completeness, and to give you a handy rule of thumb. If you're piping
+                    commands into foreach, it is Foreach-Object. If you're not piping commands into foreach, you're using
+                    the foreach loop construct.
+                </p>
             </div>
-            <p>
-                In our first example, we start by initializing an array 
-with 4 elements named $ATXBirdArray and assign the strings "bluejays", 
-                "cardinals", "mocking birds", and "monk parakeets" on 
-line 1. On line 3 we have our Foreach loop. We are going to iterate over
- 
-                the items in the $ATXBirdArray and use the $Bird 
-variable as a reference to that item. PowerShell enters the loop and 
-writes 
-                "You can find bluejays in Austin, Texas!" to the 
-console. PowerShell reaches the end of the loop and moves on to the next
- item
-                in the array. PowerShell writes "You can find cardinals 
-in Austin, Texas!" to the console. PowerShell once again reaches the 
-                end of the loop and moves on to the next item in the 
-array. PowerShell now writes "You can find mocking birds in Austin, 
-Texas!" 
-                to the console. PowerShell reaches the end of the loop 
-and moves on to the next item in the array. PowerShell writes "You can 
-find
-                monk parakeets in Austin, Texas!" and exits the loop.
-            </p>
-            <h5 class="text-center my-4">Output:</h5>
-            <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="Foreach_files/Foreach-Example1-Result.png"><br>
-            </div>
-            <h5 class="text-center my-4">Obligatory Foreach-Object alias Foreach warning</h5>
-            <p>
-                Every course on PowerShell I have ever seen has a 
-warning that Foreach-Object has an alias named Foreach. It's almost 
-impossible 
-                to accidentally use one in place of the other in 
-practice. I'm mentioning it here for completeness, and to give you a 
-handy rule 
-                of thumb. If you're piping commands into foreach, it is 
-Foreach-Object. If you're not piping commands into foreach, you're using
- 
-                the foreach loop construct.
-            </p>
         </div>
     </div>
-</div>
 
-    
-<div class="text-center">
-     <a href="./Arrays.html">Previous</a> 
-    <a href="./Lists.html">Next</a>
-</div>
-
+    <div class="text-center">
+        <a href="./Arrays.html">Previous</a>
+        <a href="./Lists.html">Next</a>
     </div>
+
+</div>
     
 </body></html>
 
