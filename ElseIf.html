@@ -35,97 +35,86 @@
 
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-white">
-            
-<li class="breadcrumb-item" aria-current="page"><a href="./index.html">Home</a></li>
-<li class="breadcrumb-item active" aria-current="page"><a href="./Learn.html">Learn</a></li>
-<li class="breadcrumb-item active" aria-current="page"> ElseIf </li>
-
+            <li class="breadcrumb-item" aria-current="page"><a href="./index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="./Learn.html">Learn</a></li>
+            <li class="breadcrumb-item active" aria-current="page"> ElseIf </li>
         </ol>
       </nav>
 
     <div class="content-div">
      
-<div class="content-card card mx-5 mb-5">
-    <div class="card-header text-center bg-dark text-light">
-        <h1 class="display-4">Control Flow</h1>
-    </div>
-    <div class="card-body justify-content-center">
-        <div>
-            <h1 class="text-center my-4">PowerShell ElseIf</h1>
-            <h2 class="text-center my-4">Before you begin: </h2>
-            <p>
-                In this lesson, we will be using PowerShell files you can find in the following github repo in a folder named 
-                PowerShell_Control_Flow:
-                <a href="https://github.com/PowerShellFieldGuide/Examples">https://github.com/PowerShellFieldGuide/Examples</a>.
-                If you have never used Github before, for full instructions on how to download this file, please see my page on 
-                <a href="./Getting_Started.html">Getting Started</a>.
-            </p>
-            <h2 class="text-center my-4">Nested If statements revisited</h2>
-            <p>
-                In our last lesson, we discussed how nested if statements can lead to very difficult to read code. 
-                In this lesson, I am going to show you how to use the ElseIf keyword in PowerShell so you can avoid
-                nested if statements.
-            </p>
-            <h5 class="text-center my-4">Example 1</h5>
-            <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./ElseIf_files/NestedIf-Example1.png"><br>
-            </div>
-            <p>
-                The above code is from our first example in the last 
-lesson. I have refactored the code using the ElseIf statement below to
-                demonstrate how much easier it is to read than using 
-nested if statements.
-            </p>
-            <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./ElseIf_files/ElseIf-Example1.png"><br>
-            </div>
-            <p>
-                Here, we once again start by initializing our 
-$Condition1 and $Condition2 variables and assigning them the values 
-$False and 
-                $True. Next we have our first conditional statement on 
-line 5. Since $Condition1 is false, we skip over our first code block
-                and move to our ElseIf statement. Here, we have test 
-$Condition2 which evaluates to $True. We execute the code
-                block following the ElseIf statement. Since the ElseIf 
-statement is true, the code block following the Else statement never 
-                executes.
-            </p>
-            <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./ElseIf_files/ElseIf-Example1-Flowchart.png"><br>
-            </div>
-            <h5 class="text-center my-4">Output:</h5>
-            <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./ElseIf_files/ElseIf-Example1-Result.png"><br>
-            </div>
-            <h5 class="text-center my-4">Example 2</h5>
-            <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./ElseIf_files/NestedIf-Example2.png"><br>
-            </div>
-            <p>
-                For example 2, I have refactored the code from example 2
- in the last lesson. Look at how much easier it is to read now that we
-                are using ElseIf instead of all those nested If 
-statements.
-            </p>
-            <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./ElseIf_files/ElseIf-Example2.png"><br>
-            </div>
-            <h5 class="text-center my-4">Output:</h5>
-            <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./ElseIf_files/ElseIf-Example2-Result.png"><br>
+    <div class="content-card card mx-5 mb-5">
+        <div class="card-header text-center bg-dark text-light">
+            <h1 class="display-4">Control Flow</h1>
+        </div>
+        <div class="card-body justify-content-center">
+            <div>
+                <h1 class="text-center my-4">PowerShell ElseIf</h1>
+                <h2 class="text-center my-4">Before you begin: </h2>
+                <p>
+                    In this lesson, we will be using PowerShell files you can find in the following github repo in a folder named
+                    PowerShell_Control_Flow:
+                    <a href="https://github.com/PowerShellFieldGuide/Examples">https://github.com/PowerShellFieldGuide/Examples</a>.
+                    If you have never used Github before, for full instructions on how to download this file, please see my page on
+                    <a href="./Getting_Started.html">Getting Started</a>.
+                </p>
+                <h2 class="text-center my-4">Nested If statements revisited</h2>
+                <p>
+                    In our last lesson, we discussed how nested if statements can lead to very difficult to read code.
+                    In this lesson, I am going to show you how to use the ElseIf keyword in PowerShell so you can avoid
+                    nested if statements.
+                </p>
+                <h5 class="text-center my-4">Example 1</h5>
+                <div class="d-flex justify-content-center container-fluid my-3">
+                    <img class="border img-fluid" src="./images/PoshNestedIf/NestedIf-Example1.png"><br>
+                </div>
+                <p>
+                    The above code is from our first example in the last lesson. I have refactored the code using
+                    the ElseIf statement below to demonstrate how much easier it is to read than using nested if
+                    statements.
+                </p>
+                <div class="d-flex justify-content-center container-fluid my-3">
+                    <img class="border img-fluid" src="./images/PoshElseIf/ElseIf-Example1.png"><br>
+                </div>
+                <p>
+                    Here, we once again start by initializing our $Condition1 and $Condition2 variables and
+                    assigning them the values $False and $True. Next we have our first conditional statement on
+                    line 5. Since $Condition1 is false, we skip over our first code block and move to our ElseIf
+                    statement. Here, we have test $Condition2 which evaluates to $True. We execute the code
+                    block following the ElseIf statement. Since the ElseIf statement is true, the code block
+                    following the Else statement never executes.
+                </p>
+                <div class="d-flex justify-content-center container-fluid my-3">
+                    <img class="border img-fluid" src="./images/PoshElseIf/ElseIf-Example1-Flowchart.png"><br>
+                </div>
+                <h5 class="text-center my-4">Output:</h5>
+                <div class="d-flex justify-content-center container-fluid my-3">
+                    <img class="border img-fluid" src="./images/PoshElseIf/ElseIf-Example1-Result.png"><br>
+                </div>
+                <h5 class="text-center my-4">Example 2</h5>
+                <div class="d-flex justify-content-center container-fluid my-3">
+                    <img class="border img-fluid" src="./images/PoshNestedIf/NestedIf-Example2.png"><br>
+                </div>
+                <p>
+                    For example 2, I have refactored the code from example 2 in the last lesson. Look at how
+                    much easier it is to read now that we are using ElseIf instead of all those nested If
+                    statements.
+                </p>
+                <div class="d-flex justify-content-center container-fluid my-3">
+                    <img class="border img-fluid" src="./images/PoshElseIf/ElseIf-Example2.png"><br>
+                </div>
+                <h5 class="text-center my-4">Output:</h5>
+                <div class="d-flex justify-content-center container-fluid my-3">
+                    <img class="border img-fluid" src="./images/PoshElseIf/ElseIf-Example2-Result.png"><br>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-    
-<div class="text-center">
-     <a href="./Else.html">Previous</a>
-    <a href="./If_Else.html">Next</a>
-</div>
-
+    <div class="text-center">
+        <a href="./NestedIf.html">Previous</a>
+        <a href="./Switch.html">Next</a>
     </div>
+</div>
     
 </body></html>
 

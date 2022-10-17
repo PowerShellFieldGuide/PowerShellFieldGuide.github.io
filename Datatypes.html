@@ -72,7 +72,7 @@
             </p>
             <h2 class="text-center my-4">Common data types</h2>
             <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./Datatypes_files/DataTypes.png"><br>
+                <img class="border img-fluid" src="./images/PoshDataTypes/DataTypes.png"><br>
             </div>  
             <h5 class="text-center my-4">Characters and Strings</h5>
             <p>
@@ -115,7 +115,7 @@ them later referred to null as his "billion dollar mistake."
             </p>
             <h2 class="text-center my-4">PowerShell Type Accelators</h2>
             <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./Datatypes_files/String-Example1.png"><br>
+                <img class="border img-fluid" src="./images/PoshDataTypes/String-Example1.png"><br>
             </div>
             <p>
                 At this point, we sure have spent a lot of time talking 
@@ -128,7 +128,7 @@ hit enter. Congratulations, you made a string. We can call
 is in fact a string.
             </p>
             <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./Datatypes_files/Bool-Example1.png"><br>
+                <img class="border img-fluid" src="./images/PoshDataTypes/Bool-Example1.png"><br>
             </div>
             <p>
                 Let's try this again with a boolean. In PowerShell, the 
@@ -143,7 +143,7 @@ around 5 so that it is an integer and not a string. Notice that
 can't call .getType() on 5. 
             </p>
             <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./Datatypes_files/IntChar-Example1.png"><br>
+                <img class="border img-fluid" src="./images/PoshDataTypes/IntChar-Example1.png"><br>
             </div>
             <p>
                 We're going to get a little bit ahead of ourselves here since we will be covering variables in a later chapter,
@@ -153,26 +153,26 @@ can't call .getType() on 5.
                 a 32 bit signed integer to be accurate, but I don't want to get bogged down in details.
             </p>
             <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./Datatypes_files/Int-Example2.png"><br>
+                <img class="border img-fluid" src="./images/PoshDataTypes/Int-Example2.png"><br>
             </div>
             <p>
                 I mentioned before that PowerShell and C#'s built in 
-data types come from the .Net framework. I also said that
-                they live in the System namespace. We can access these 
-in PowerShell with aliases called type accelerators so
+                data types come from the .Net framework. I also said that
+                they live in the System namespace. We can access these
+                in PowerShell with aliases called type accelerators so
                 that we don't have to provide the namespace. The syntax 
-for a type accelerator is to place the name of the type
+                for a type accelerator is to place the name of the type
                 inside of square brackets. We can use [int] for int32, 
-[string] for strings, [bool] for booleans, [float] for floats,
+                [string] for strings, [bool] for booleans, [float] for floats,
                 [double] for doubles, and [char] for chars. Think back 
-to when we tried to create a char before and it automatically
+                to when we tried to create a char before and it automatically
                 became a string. Assign the string "c" to a variable 
-named $Char, but this time place the type accelerator [char]
+                named $Char, but this time place the type accelerator [char]
                 before the variable. Call .getType() on this variable 
-and this time it is a character.
+                and this time it is a character.
             </p>
             <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./Datatypes_files/Char-Example2.png"><br>
+                <img class="border img-fluid" src="./images/PoshDataTypes/Char-Example2.png"><br>
             </div>
             <p>
                 I have covered only a few of the available type accelerators in PowerShell. You can find a complete list here:
