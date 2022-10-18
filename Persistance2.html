@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-      <title>PoshFG -  Persistance </title>
-      <!-- load style sheets -->
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>PoshFG -  Persistance </title>
+    <!-- load style sheets -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
@@ -11,206 +12,162 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-      
-      
-    </head>
-    <body id="top">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+</head>
+<body id="top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="./index.html">PowerShell Field Guide</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
         </button>
-      
+
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="./Learn.html">Learn</a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="./Links.html">Links</a>
-            </li>
-          </ul>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./Learn.html">Learn</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="./Links.html">Links</a>
+                </li>
+            </ul>
         </div>
-      </nav>
-
-      <nav aria-label="breadcrumb">
+    </nav>
+    <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-white">
-            
-<li class="breadcrumb-item" aria-current="page"><a href="./index.html">Home</a></li>
-<li class="breadcrumb-item active" aria-current="page"><a href="./Learn.html">Learn</a></li>
-<li class="breadcrumb-item active" aria-current="page"> Persistance </li>
-
+            <li class="breadcrumb-item" aria-current="page"><a href="./index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="./Learn.html">Learn</a></li>
+            <li class="breadcrumb-item active" aria-current="page"> Persistance </li>
         </ol>
-      </nav>
-
+    </nav>
     <div class="content-div">
-     
-<div class="content-card card mx-5 mb-5">
-    <div class="card-header text-center bg-dark text-light">
-        <h1 class="display-4">Solving Problems</h1>
-    </div>
-    <div class="card-body justify-content-center">
-        <div>
-            <h1 class="text-center my-4">Storing data in text files</h1>
-            <p>
-                This is the second lesson in a series of lessons on how 
-you can save data so you can use it later with PowerShell.             
-            </p>
-            <h2 class="text-center my-4">Before you begin: </h2>
-            <p>
-                In this lesson, we will be using PowerShell files you can find in the following github repo in a folder named 
-                PowerShell_Peristance:
-                <a href="https://github.com/PowerShellFieldGuide/Examples">https://github.com/PowerShellFieldGuide/Examples</a>.
-                If you have never used Github before, for full instructions on how to download this file, please see my page on 
-                <a href="./Getting_Started.html">Getting Started</a>.
-            </p>
-            <h2 class="text-center my-4">Txt files</h2>
-            <p>
-                Txt files are a great way to store data for later use. 
-Anyone from a Linux background should be used to doing this, but it
-                might be new for Windows admins. I first am going to 
-explain the ways this was done with cmd.exe since these are still 
-supported
-                in PowerShell. I am then going to cover how to do the 
-same operations with PowerShell cmdlets.
-            </p>
-            <h2> &gt;, &gt;&gt;, and &lt; </h2>
-            <p>
-                If you're coming to these lessons from a Linux or 
-Windows administration background, you're probably familiar with the 
-redirection
-                operators. &gt; lets you redirect stdout to a file and 
-will create the file if it doesn't exist and will overwrite the data in 
-that
-                file. &gt;&gt; redirects stdout and appends it to the 
-end of a file. &lt; is used to read from files. In reality it gets a bit
- more
-                complicated than this, but I wanted to cover these ideas
- briefly first since you can still use them in PowerShell. These still 
-exist
-                in PowerShell and can be useful for logging information,
- but there are more options now. Back in the day, these were your only 
-options.
-            </p>
-            <h2>Out-File</h2>
-            <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./Persistance2_files/Out-File.png"><br>
+        <div class="content-card card mx-5 mb-5">
+            <div class="card-header text-center bg-dark text-light">
+                <h1 class="display-4">Solving Problems</h1>
             </div>
-            <p>
-                The Out-File cmdlet will write whatever you pipe into it
- to a file. This is the standard way to do this in PowerShell. In this 
-example,
-                I use it to write the text "String" to a text file named
- .\Out-File.
-            </p>
-            <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./Persistance2_files/Out-File-Notepad.png"><br>
+            <div class="card-body justify-content-center">
+                <div>
+                    <h1 class="text-center my-4">Storing data in text files</h1>
+                    <p>
+                        This is the second lesson in a series of lessons on how you can save data so you can use it later
+                        with PowerShell.
+                    </p>
+                    <h2 class="text-center my-4">Before you begin: </h2>
+                    <p>
+                        In this lesson, we will be using PowerShell files you can find in the following github repo in a
+                        folder named PowerShell_Peristance:
+                        <a href="https://github.com/PowerShellFieldGuide/Examples">
+                            https://github.com/PowerShellFieldGuide/Examples
+                        </a>.
+                        If you have never used Github before, for full instructions on how to download this file, please
+                        see my page on
+                        <a href="./Getting_Started.html">Getting Started</a>.
+                    </p>
+                    <h2 class="text-center my-4">Txt files</h2>
+                    <p>
+                        Txt files are a great way to store data for later use. Anyone from a Linux background should be
+                        used to doing this, but it might be new for Windows admins. I first am going to explain the ways
+                        this was done with cmd.exe since these are still supported in PowerShell. I am then going to cover
+                        how to do the same operations with PowerShell cmdlets.
+                    </p>
+                    <h2> &gt;, &gt;&gt;, and &lt; </h2>
+                    <p>
+                        If you're coming to these lessons from a Linux or Windows administration background, you're
+                        probably familiar with the redirection operators. &gt; lets you redirect stdout to a file and
+                        will create the file if it doesn't exist and will overwrite the data in that file. &gt;&gt; redirects
+                        stdout and appends it to the end of a file. &lt; is used to read from files. In reality it gets a bit
+                        more complicated than this, but I wanted to cover these ideas briefly first since you can still use
+                        them in PowerShell. These still exist in PowerShell and can be useful for logging information, but
+                        there are more options now. Back in the day, these were your only options.
+                    </p>
+                    <h2>Out-File</h2>
+                    <div class="d-flex justify-content-center container-fluid my-3">
+                        <img class="border img-fluid" src="./images/PoshTxt/Out-File.png"><br>
+                    </div>
+                    <p>
+                        The Out-File cmdlet will write whatever you pipe into it to a file. This is the standard way to do
+                        this in PowerShell. In this example, I use it to write the text "String" to a text file named
+                        .\Out-File.
+                    </p>
+                    <div class="d-flex justify-content-center container-fluid my-3">
+                        <img class="border img-fluid" src="./images/PoshTxt/Out-File-Notepad.png"><br>
+                    </div>
+                    <h2>Add-Content</h2>
+                    <div class="d-flex justify-content-center container-fluid my-3">
+                        <img class="border img-fluid" src="./images/PoshTxt/Add-Content.png"><br>
+                    </div>
+                    <p>
+                        The Add-Content cmdlet will let you append text to the end of a text file. In this example, I
+                        append the word "String2" to the end of of the file.
+                    </p>
+                    <div class="d-flex justify-content-center container-fluid my-3">
+                        <img class="border img-fluid" src="./images/PoshTxt/Add-Content-Notepad.png"><br>
+                    </div>
+                    <h2>Get-Content</h2>
+                    <div class="d-flex justify-content-center container-fluid my-3">
+                        <img class="border img-fluid" src="./images/PoshTxt/Get-Content.png"><br>
+                    </div>
+                    <p>
+                        The Get-Content command will display the contents of a text file in the shell. You can also use
+                        this to store the contents in an array of strings. The array items will be separated by the
+                        line endings.
+                    </p>
+                    <h5 class="text-center my-4">Write-DateToTxt</h5>
+                    <div class="d-flex justify-content-center container-fluid my-3">
+                        <img class="border img-fluid" src="./images/PoshTxt/Write-DateToTxt.png"><br>
+                    </div>
+                    <p>
+                        The first script we have here is one named Write-DateToTxt and it might be surprising, but it will
+                        write the current date to a txt file. Lines 3-7 create named parameters with default values.
+                        Lines 9-13 make sure the target directory exist. Lines 16-17 Get the date (Get-Date cmdlet) and
+                        write it to a file at the target path.
+                    </p>
+                    <h5 class="text-center my-4">Console</h5>
+                    <div class="d-flex justify-content-center container-fluid my-3">
+                        <img class="border img-fluid" src="./images/PoshTxt/Write-DateToTxt-Result.png"><br>
+                    </div>
+                    <p>
+                        Above you can see the output in the console from running the script. I open the file created with
+                        notepad and see it has the current date (below).
+                    </p>
+                    <h5 class="text-center my-4">Txt file</h5>
+                    <div class="d-flex justify-content-center container-fluid my-3">
+                        <img class="border img-fluid" src="./images/PoshTxt/Write-DateToTxt-Notepad.png"><br>
+                    </div>
+                    <h5 class="text-center my-4">What can we do with it?</h5>
+                    <p>
+                        PowerShell has a very useful cmdlet named Get-Member. Get-Member will display information about an
+                        object including its type, properties, and methods. Let's pipe the data from our text file into
+                        Get-Member.
+                    </p>
+                    <div class="d-flex justify-content-center container-fluid my-3">
+                        <img class="border img-fluid" src="./images/PoshTxt/Write-DateToTxt-GetMember.png"><br>
+                    </div>
+                    <p>
+                        This is kind of an eyeful, but if you look at this long enough, you will probably realize that
+                        we're just dealing with the methods available for strings. You can get pretty far storing data
+                        this way and writing scripts to process and format it for later consumption, but it can be
+                        time-consuming in some cases. A better approach is to store PowerShell objects in a way that still
+                        represents the objects so we can retrieve them later. PowerShell provides cmdlets that make doing
+                        this with csv and xml files very pain-free. I will be covering how to do this next.
+                    </p>
+                    <h5 class="text-center my-4">Export-AdminsToTxt</h5>
+                    <div class="d-flex justify-content-center container-fluid my-3">
+                        <img class="border img-fluid" src="./images/PoshTxt/Export-AdminsToTxt.png"><br>
+                    </div>
+                    <p>
+                        Here's a script that will get the members of the administrators on a target machine and write the
+                        output to a text file. I am including this as a bonus for reading my stuff. I am not going to be
+                        running it for you because I don't want to spend the time it would take to make sure I'm not
+                        sharing any information I shouldn't be. You must run this script as an administrator for it to
+                        work. You could use it to audit the administrators on some Windows clients in an organization.
+                    </p>
+                </div>
             </div>
-            <h2>Add-Content</h2>
-            <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./Persistance2_files/Add-Content.png"><br>
-            </div>
-            <p>
-                The Add-Content cmdlet will let you append text to the 
-end of a text file. In this example, I append the word "String2" to the 
-end of
-                of the file.
-            </p>
-            <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./Persistance2_files/Add-Content-Notepad.png"><br>
-            </div>
-            <h2>Get-Content</h2>
-            <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./Persistance2_files/Get-Content.png"><br>
-            </div>
-            <p>
-                The Get-Content command will display the contents of a 
-text file in the shell. You can also use this to store the contents in 
-an array
-                of strings. The array items will be separated by the 
-line endings.
-            </p>
-            <h5 class="text-center my-4">Write-DateToTxt</h5>
-            <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./Persistance2_files/Write-DateToTxt.png"><br>
-            </div>
-            <p>
-                The first script we have here is one named 
-Write-DateToTxt and it might be surprising, but it will write the 
-current date to a txt file.
-                Lines 3-7 create named parameters with default values. 
-Lines 9-13 make sure the target directory exist. Lines 16-17 Get the 
-date (Get-Date
-                cmdlet) and write it to a file at the target path.
-            </p>
-            <h5 class="text-center my-4">Console</h5>
-            <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./Persistance2_files/Write-DateToTxt-Result.png"><br>
-            </div>
-            <p>
-                Above you can see the output in the console from running
- the script. I open the file created with notepad and see it has the 
-current date
-                (below).
-            </p>
-            <h5 class="text-center my-4">Txt file</h5>
-            <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./Persistance2_files/Write-DateToTxt-Notepad.png"><br>
-            </div>
-            <h5 class="text-center my-4">What can we do with it?</h5>
-            <p>
-                PowerShell has a very useful cmdlet named Get-Member. 
-Get-Member will display information about an object including its type,
-                properties, and methods. Let's pipe the data from our 
-text file into Get-Member.
-            </p>
-            <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./Persistance2_files/Write-DateToTxt-GetMember.png"><br>
-            </div>
-            <p>
-                This is kind of an eyeful, but if you look at this long 
-enough, you will probably realize that we're just dealing with the 
-methods
-                available for strings. You can get pretty far storing 
-data this way and writing scripts to process and format it for later 
-consumption,
-                but it can be time consuming in some cases. A better 
-approach is to store PowerShell objects in a way that still represents 
-the objects
-                so we can retrieve them later. PowerShell provides 
-cmdlets that make doing this with csv and xml files very pain-free. I 
-will be covering
-                how to do this next.
-            </p>
-            <h5 class="text-center my-4">Export-AdminsToTxt</h5>
-            <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./Persistance2_files/Export-AdminsToTxt.png"><br>
-            </div>
-            <p>
-                Here's a script that will get the members of the 
-administrators on a target machine and write the output to a text file. I
- am including
-                this as a bonus for reading my stuff. I am not going to 
-be running it for you because I don't want to spend the time it would 
-take to make
-                sure I'm not sharing any information I shouldn't be. You
- must run this script as an administrator for it to work. You could use 
-it to audit
-                the administrators on some Windows clients in an 
-organization.
-            </p>
+        </div>
+        <div class="text-center">
+            <a href="./Persistance.html">Previous</a>
+            <a href="./Csv.html">Next</a>
         </div>
     </div>
-</div>
-
-    
-<div class="text-center">
-    <a href="./Persistance.html">Previous</a>
-    <a href="./Csv.html">Next</a>
-</div>
-
-    </div>
-    
 </body></html>
 
 

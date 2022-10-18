@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-      <title>PoshFG -  Positional Parameters </title>
-      <!-- load style sheets -->
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>PoshFG -  Positional Parameters </title>
+    <!-- load style sheets -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
@@ -11,192 +12,112 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-      
-      
-    </head>
-    <body id="top">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+</head>
+<body id="top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="./index.html">PowerShell Field Guide</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
         </button>
-      
+
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="./Learn.html">Learn</a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="./Links.html">Links</a>
-            </li>
-          </ul>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./Learn.html">Learn</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="./Links.html">Links</a>
+                </li>
+            </ul>
         </div>
-      </nav>
+    </nav>
 
-      <nav aria-label="breadcrumb">
+    <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-white">
-            
-<li class="breadcrumb-item" aria-current="page"><a href="./index.html">Home</a></li>
-<li class="breadcrumb-item active" aria-current="page"><a href="./Learn.html">Learn</a></li>
-<li class="breadcrumb-item active" aria-current="page"> Positional Parameters </li>
-
+            <li class="breadcrumb-item" aria-current="page"><a href="./index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="./Learn.html">Learn</a></li>
+            <li class="breadcrumb-item active" aria-current="page"> Positional Parameters </li>
         </ol>
-      </nav>
+    </nav>
 
     <div class="content-div">
-     
-<div class="content-card card mx-5 mb-5">
-    <div class="card-header text-center bg-dark text-light">
-        <h1 class="display-4">Making Reusable Code</h1>
-    </div>
-    <div class="card-body justify-content-center">
-        <div>
-            <h1 class="text-center my-4">Making your code reusable - Positional Parameters</h1>
-            <p>
-                This is the second lesson in a series of lessons on making your code more reusable.
-            </p>
-            <h2 class="text-center my-4">Before you begin: </h2>
-            <p>
-                In this lesson, we will be using PowerShell files you can find in the following github repo in a folder named 
-                PowerShell_Functions:
-                <a href="https://github.com/PowerShellFieldGuide/Examples">https://github.com/PowerShellFieldGuide/Examples</a>.
-                If you have never used Github before, for full instructions on how to download this file, please see my page on 
-                <a href="./Getting_Started.html">Getting Started</a>.
-            </p>
-            <h2 class="text-center my-4">Parameters</h2>
-            <p>
-                Parameters are another, more commonly used way to 
-provide input to scripts and cmdlets in PowerShell than using the 
-Read-Host cmdlet.
-                Parameters allow you to provide values to a script when 
-you call the script in the shell that will make the script do different 
-things.
-                The values that you provide the parameters are called 
-arguments.
-            </p>
-            <h2 class="text-center my-4">Positional Parameters</h2>
-            <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./Positional%20Parameters_files/PositionalParams-Syntax.png"><br>
+        <div class="content-card card mx-5 mb-5">
+            <div class="card-header text-center bg-dark text-light">
+                <h1 class="display-4">Making Reusable Code</h1>
             </div>
-            <p>
-                There are two types of parameters in PowerShell, 
-positional parameters and named parameters. I will be covering 
-positional parameters here
-                and named parameters in the next lesson.
-            </p>
-            <p>
-                The syntax for a postional parameter is simple. All you 
-have to do is reference the $args array in your code and you are good to
- go.
-                That's because parameters use the position of an 
-argument to determine which parameter a programmer intended to use. This
- will be
-                more obvious when you can contrast positional parameters
- against named parameters (covered next lesson).
-            </p>
-            <h5 class="text-center my-4">Example 1</h5>
-            <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./Positional%20Parameters_files/PositionalParams-Example1.png"><br>
-            </div>
-            <p>
-                Example 1 is a demonstration of positional parameters. 
-The example itself is simple, here we only have three lines.
-                They each write a string to the console then print the 
-positional parameter. When we run the script in the console
-                below, note that we provide values following the name of
- the script. These values are the arguments provided to the
-                positional parameters.
-            </p>
-            <h5 class="text-center my-4">Output:</h5>
-            <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./Positional%20Parameters_files/PositionalParams-Example1-Result1.png"><br>
-            </div>
-            <p>
-                We can run the script again, this time providing 
-different values for the positional parameters. I wanted to
-                point out that PowerShell really doesn't care what type 
-you give it for a positional parameter. This (hopefully)
-                obviously can lead to some unintended consequences. When
- compared with named parameters, the code is not particularly
-                self-documenting.
-            </p>
-            <h5 class="text-center my-4">Output:</h5>
-            <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./Positional%20Parameters_files/PositionalParams-Example1-Result2.png"><br>
-            </div>
-            <p>
-                This last demo shows that Powershell is so flexible with
- positional parameters, it will still run even if you don't provide 
-arguments for
-                one or more.
-            </p>
-            <h5 class="text-center my-4">Output:</h5>
-            <div class="d-flex justify-content-center container-fluid my-3">
-                <img class="border img-fluid" src="./Positional%20Parameters_files/PositionalParams-Example1-Result3.png"><br>
+            <div class="card-body justify-content-center">
+                <div>
+                    <h1 class="text-center my-4">Making your code reusable - Positional Parameters</h1>
+                    <p>
+                        This is the second lesson in a series of lessons on making your code more reusable.
+                    </p>
+                    <h2 class="text-center my-4">Before you begin: </h2>
+                    <p>
+                        In this lesson, we will be using PowerShell files you can find in the following github repo in a folder named
+                        PowerShell_Functions:
+                        <a href="https://github.com/PowerShellFieldGuide/Examples">https://github.com/PowerShellFieldGuide/Examples</a>.
+                        If you have never used Github before, for full instructions on how to download this file, please see my page on
+                        <a href="./Getting_Started.html">Getting Started</a>.
+                    </p>
+                    <h2 class="text-center my-4">Parameters</h2>
+                    <p>
+                        Parameters are another, more commonly used way to provide input to scripts and cmdlets in
+                        PowerShell than using the Read-Host cmdlet. Parameters allow you to provide values to a script
+                        when you call the script in the shell that will make the script do different things.
+                        The values that you provide the parameters are called arguments.
+                    </p>
+                    <h2 class="text-center my-4">Positional Parameters</h2>
+                    <div class="d-flex justify-content-center container-fluid my-3">
+                        <img class="border img-fluid" src="./images/PoshPositionalParams/PositionalParams-Syntax.png"><br>
+                    </div>
+                    <p>
+                        There are two types of parameters in PowerShell, positional parameters and named parameters. I will
+                        be covering positional parameters here and named parameters in the next lesson.
+                    </p>
+                    <p>
+                        The syntax for a postional parameter is simple. All you have to do is reference the $args array in
+                        your code and you are good to go. That's because parameters use the position of an argument to
+                        determine which parameter a programmer intended to use. This will be more obvious when you can
+                        contrast positional parameters against named parameters (covered next lesson).
+                    </p>
+                    <h5 class="text-center my-4">Example 1</h5>
+                    <div class="d-flex justify-content-center container-fluid my-3">
+                        <img class="border img-fluid" src="./images/PoshPositionalParams/PositionalParams-Example1.png"><br>
+                    </div>
+                    <p>
+                        Example 1 is a demonstration of positional parameters. The example itself is simple, here we only
+                        have three lines. They each write a string to the console then print the positional parameter.
+                        When we run the script in the console below, note that we provide values following the name of
+                        the script. These values are the arguments provided to the positional parameters.
+                    </p>
+                    <h5 class="text-center my-4">Output:</h5>
+                    <div class="d-flex justify-content-center container-fluid my-3">
+                        <img class="border img-fluid" src="./images/PoshPositionalParams/PositionalParams-Example1-Result1.png"><br>
+                    </div>
+                    <p>
+                        We can run the script again, this time providing different values for the positional parameters.
+                        I wanted to point out that PowerShell really doesn't care what type you give it for a positional
+                        parameter. This (hopefully) obviously can lead to some unintended consequences. When compared with
+                        named parameters, the code is not particularly self-documenting.
+                    </p>
+                    <h5 class="text-center my-4">Output:</h5>
+                    <div class="d-flex justify-content-center container-fluid my-3">
+                        <img class="border img-fluid" src="./images/PoshPositionalParams/PositionalParams-Example1-Result2.png"><br>
+                    </div>
+                    <p>
+                        This last demo shows that Powershell is so flexible with positional parameters, it will still run
+                        even if you don't provide arguments for one or more.
+                    </p>
+                    <h5 class="text-center my-4">Output:</h5>
+                    <div class="d-flex justify-content-center container-fluid my-3">
+                        <img class="border img-fluid" src="./images/PoshPositionalParams/PositionalParams-Example1-Result3.png"><br>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="text-center">
+            <a href="./Print-Files1.html">Previous</a>
+            <a href="./Print-Files2.html">Next</a>
+        </div>
     </div>
-</div>
-
-    
-<div class="text-center">
-    <a href="./Print-Files1.html">Previous</a>
-    <a href="./Print-Files2.html">Next</a>
-</div>
-
-    </div>
-    
 </body></html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
